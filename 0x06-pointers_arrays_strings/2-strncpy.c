@@ -1,25 +1,3 @@
-Task 2.txt
-Who has access
-A
-System properties
-Type
-Text
-Size
-679 bytes
-Storage used
-679 bytes
-Location
-0x06-pointers_arrays_strings
-Owner
-Antony Bahati
-Modified
-12:03 AM by Antony Bahati
-Opened
-9:18 PM by me
-Created
-12:05 AM
-No description
-Viewers can download
 #include "main.h"
 /**
 *  _strncpy - C function that copies a string, including the
