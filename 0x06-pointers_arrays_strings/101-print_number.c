@@ -1,38 +1,22 @@
 #include "main.h"                                                                                                                     
                                                                                                                                       
 /**                                                                                                                                   
- * cap_string - Capitalizes all words of a string.                                                                                    
- * @str: The string to be capitalized.                                                                                                
- *                                                                                                                                    
- * Return: A pointer to the changed string.                                                                                           
+ * print_number - Prints an integer.                                                                                                  
+ * @n: The integer to be printed.                                                                                                     
  */                                                                                                                                   
-char *cap_string(char *str)                                                                                                           
+void print_number(int n)                                                                                                              
 {                                                                                                                                     
-        int index = 0;                                                                                                                
+        unsigned int num = n;                                                                                                         
                                                                                                                                       
-        while (str[index])                                                                                                            
+        if (n < 0)                                                                                                                    
         {                                                                                                                             
-                while (!(str[index] >= 'a' && str[index] <= 'z'))                                                                     
-                        index++;                                                                                                      
-                                                                                                                                      
-                if (str[index - 1] == ' ' ||                                                                                          
-                    str[index - 1] == '\t' ||                                                                                         
-                    str[index - 1] == '\n' ||                                                                                         
-                    str[index - 1] == ',' ||                                                                                          
-                    str[index - 1] == ';' ||                                                                                          
-                    str[index - 1] == '.' ||                                                                                          
-                    str[index - 1] == '!' ||                                                                                          
-                    str[index - 1] == '?' ||                                                                                          
-                    str[index - 1] == '"' ||                                                                                          
-                    str[index - 1] == '(' ||                                                                                          
-                    str[index - 1] == ')' ||                                                                                          
-                    str[index - 1] == '{' ||                                                                                          
-                    str[index - 1] == '}' ||                                                                                          
-                    index == 0)                                                                                                       
-                        str[index] -= 32;                                                                                             
-                                                                                                                                      
-                index++;                                                                                                              
+                _putchar('-');                                                                                                        
+                num = -num;                                                                                                           
         }                                                                                                                             
                                                                                                                                       
-        return (str);                                                                                                                 
+        if ((num / 10) > 0)                                                                                                           
+                print_number(num / 10);                                                                                               
+                                                                                                                                      
+        _putchar((num % 10) + '0');                                                                                                   
 }
+
